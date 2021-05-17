@@ -1,0 +1,26 @@
+{% extends 'mapmovie/base.html' %}
+{% block title %}
+Center area.
+{% endblock %}
+{% load static %}
+<body>
+{% block content %}
+<img class="doll" src="../../../media/mapmovie/doll/c_doll_1.png" >
+
+
+<div id="butt">
+            <form action="" method="post">{% csrf_token %}
+            <button name="step" type="submit" value="w">
+                <img class="icons" src="../../../media/mapmovie/icons/left.png" width="100" height="100" ></button>
+          <button name="step" type="submit" value="n">
+          <img class="icons" src="../../../media/mapmovie/icons/up.png" width="100" height="100" ></button>
+              <button name="step" type="submit" value="s">
+              <img class="icons" src="../../../media/mapmovie/icons/down.png" width="100" height="100"></button>
+                  <button name="step" type="submit" value="e">
+               <img class="icons" src="../../../media/mapmovie/icons/right.png" width="100" height="100">
+      </button>
+            </form>
+</div>
+{% endblock %}
+
+</body>

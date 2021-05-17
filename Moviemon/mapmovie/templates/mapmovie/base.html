@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% block css %}
+            <link rel="stylesheet" href="{% static 'mapmovie/main.css' %}">
+            {% endblock %}
+        <title>
+            {% block title %}
+            {{title}}
+            {% endblock %}
+        </title>
+
+    </head>
+        {% block content %}
+
+        {% endblock %}
+    <div id="ball">
+        {% if ball == 'n' %}
+            <img class="doll" src="../../../media/mapmovie/ball/n_ball.png" >
+        {% elif ball == 's' %}
+            <img class="doll" src="../../../media/mapmovie/ball/s_ball.png" >
+        {% elif ball == 'w' %}
+            <img class="doll" src="../../../media/mapmovie/ball/w_ball.png" >
+        {% elif ball == 'e' %}
+            <img class="doll" src="../../../media/mapmovie/ball/e_ball.png" >
+        {% elif ball == 's_e' %}
+            <img class="doll" src="../../../media/mapmovie/ball/s_e_ball.png" >
+        {% elif ball == 'n_e' %}
+            <img class="doll" src="../../../media/mapmovie/ball/n_e_ball.png" >
+        {% elif ball == 'c' %}
+            <img class="doll" src="../../../media/mapmovie/ball/c_ball.png" >
+        {% elif ball == 'n_w' %}
+            <img class="doll" src="../../../media/mapmovie/ball/n_w_ball.png" >
+        {% elif ball == 's_w' %}
+            <img class="doll" src="../../../media/mapmovie/ball/s_w_ball.png" >
+        {% endif %}
+    </div>
+    <div id="start_stop">
+            <a href="{% url 'start_game' %}">
+        <img class="icons" src="../../../media/mapmovie/power-button.png" width="100" height="100" >
+            </a>
+            <a href="{% url 'new_game' %}">
+            <img class="icons" src="../../../media/mapmovie/logout.png" width="100" height="100" >
+            </a>
+            </div>
+Films in the start:
+    {% for film in films %}
+</br>
+        <p></p>
+   {{ film }}
+    {% endfor %}
+    </br>
+        <p></p>
+    </br>
+        <p></p>
+    </br>
+        <p></p>
+Films of the Russian doll:
+    {% for box_movie in box_movies %}
+        </br>
+        <p></p>
+   {{ box_movie }}
+    {% endfor %}
+</html>

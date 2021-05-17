@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>moviedex</title>
+    </head>
+    <body>
+        <h1>moviedex</h1>
+        {% if movies %}
+        <h2>cought moviemons:</h2>
+        <ul>
+            {% for key, value in movies.items %}
+            <li><b>id</b>: {{ key }}, <b>name:</b> {{ value.name}}<br>
+                <img src={{ value.poster }} alt={{ value.name}}><br>
+                <b>director:</b> {% for d in value.director %} {{ d }} {% endfor %}
+                , <b>year:</b> {{ value.year }}, <b>rating:</b>  {{ value.rating}} <br>
+                <b>synopsis:</b> {{ value.synopsis }} <br>
+                <b>actors:</b> {% for a in value.actors %} {{ a }}, {% endfor %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    <div id="start_stop">
+            <a href="{% url 'start_game' %}">
+        <img class="icons" src="../../../media/mapmovie/power-button.png" width="100" height="100" >
+            </a>
+            <a href="{% url 'new_game' %}">
+            <img class="icons" src="../../../media/mapmovie/logout.png" width="100" height="100" >
+            </a>
+            </div>
+    </body>
+</html>

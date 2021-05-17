@@ -1,0 +1,24 @@
+{% extends 'mapmovie/base.html' %}
+{% block title %}
+North-West area.
+{% endblock %}
+{% load static %}
+<body>
+{% block content %}
+<img class="doll" src="../../../media/mapmovie/doll/n_w_doll.png" >
+
+
+<div id="butt">
+            <form action="" method="post">{% csrf_token %}
+            <button name="step" type="submit" value="w">
+                <img class="icons" src="../../../media/mapmovie/icons/left.png" width="100" height="100" ></button>
+          <button name="step" type="submit" value="c">
+          <img class="icons" src="../../../media/mapmovie/icons/down.png" width="100" height="100" ></button>
+                  <button name="step" type="submit" value="n">
+               <img class="icons" src="../../../media/mapmovie/icons/right.png" width="100" height="100">
+      </button>
+            </form>
+            <img class="icons" src="../../../media/mapmovie/icons/up.png" width="100" height="100">
+</div>
+{% endblock %}
+</body>

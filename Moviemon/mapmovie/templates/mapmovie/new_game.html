@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title>New game</title>
+        {% block css %}
+            <link rel="stylesheet" href="{% static 'mapmovie/main.css' %}">
+            {% endblock %}
+    <a href="{% url 'start_game' %}">
+    <h1>New Game !</h1>
+        </a>
+    </head>
+<body>
+
+</body>
+</html>

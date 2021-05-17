@@ -1,0 +1,56 @@
+body{
+  background-image: url("../../../media/mapmovie/map.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-height: 1080px;
+  background-width: 1080px;
+}
+body .doll{
+  height: 1080px;
+  width: 1080px;
+  position: fixed;
+}
+
+.ions{
+  width: 50px;
+  height: 50%;
+  align: right;
+}
+body #butt{
+  position: absolute;
+  right: 300px;
+  width: 100px;
+  height: 120px;
+}
+
+h1 {
+    left: 0;
+    font-size: 100px;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+body #ch_p{
+   position: absolute;
+  right: 300px;
+  width: 500px;
+  height: 300px;
+}
+
+body #start_stop{
+  position: absolute;
+  right: 300px;
+  width: 100px;
+  height: 120px;
+    bottom: 35%;
+}
+body .films_10{
+  position: absolute;
+  right: 300px;
+  width: 100px;
+  height: 120px;
+    bottom: 15%;
+}

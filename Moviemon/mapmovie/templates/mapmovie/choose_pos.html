@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Start game</title>
+    </head>
+    {% block css %}
+            <link rel="stylesheet" href="{% static 'mapmovie/main.css' %}">
+            {% endblock %}
+<body>
+
+<div id="ch_p">
+    <h2>Choose start position in Moscow:</h2>
+    <a href="{% url 'c_doll' %}">
+        <h3>Center</h3>
+        </a>
+    <a href="{% url 'n_doll' %}">
+        <h3>North</h3>
+        </a>
+    <a href="{% url 'n_w_doll' %}">
+        <h3>North-West</h3>
+        </a>
+    <a href="{% url 'n_e_doll' %}">
+        <h3>Noth-East </h3>
+        </a>
+    <a href="{% url 's_doll' %}">
+        <h3>South </h3>
+        </a>
+    <a href="{% url 's_w_doll' %}">
+        <h3>South-West </h3>
+        </a>
+    <a href="{% url 's_e_doll' %}">
+        <h3>South-East</h3>
+        </a>
+    <a href="{% url 'w_doll' %}">
+        <h3>West </h3>
+        </a>
+    <a href="{% url 'e_doll' %}">
+       <h3> East </h3>
+        </a>
+    </div>
+
+Films in the start:
+    {% for film in films %}
+        </br>
+        <p></p>
+   {{ film }}
+    {% endfor %}
+</br>
+        <p></p>
+</br>
+        <p></p>
+</br>
+        <p></p>
+Films of the Russian doll:
+    {% for box_movie in box_movies %}
+        </br>
+        <p></p>
+   {{ box_movie }}
+    {% endfor %}
+</body>
+</html>
